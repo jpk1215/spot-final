@@ -15,9 +15,6 @@ angular.module('spotFinalApp', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
-    SpotifyProvider.setClientId('35fb56b045e647ce93c3cc8091b3a9f9');
-    SpotifyProvider.setRedirectUri('http://localhost:9000/callback');
-    SpotifyProvider.setScope('playlist-modify-public user-read-private user-library-read');
   })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
